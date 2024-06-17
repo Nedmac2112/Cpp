@@ -1,0 +1,91 @@
+C++ Basics
+
+Basic Program
+Basic data types:
+int (Ex. 20, -100, 0)
+float (Ex. 10.5, -7.2, 3.14)
+bool (Ex. true, false)
+char (Ex. ‘c’, ‘8’, ‘$’)
+string (Ex. “Camden K.”, “blue car”, “2112”)
+
+These are the 5 basic data types in C++.
+Everytime you create a C++ program, the outline of the program will look like the following:
+			#include <iostream>
+			using namespace std;
+
+			int main()
+			{
+
+				return 0;
+			}
+
+“using namespace std;” is optional, but I will be using it throughout this tutorial.
+In order to display something to the console, you use “cout <<”.
+			#include <iostream>
+			using namespace std;
+
+			int main()
+			{
+					cout << "Hello World";
+				return 0;
+			}
+
+If you omit “using namespace std;”, then the line cout << “Hello World”; will look like: 
+std::cout << “Hello World”;.
+Do declare a variable in C++, you do the following: “datatype varName = value;”. For example:
+int age = 19;. Variables can't start with a number, can't have spaces, and can’t contain special characters other than an underscore (‘_’). To output a variable to the console, do: cout << varName;. To output more than one thing to the console, do: cout << firstVar << secondVar;.
+
+
+
+Math Operations
+Basic arithmetic operators:
++ (addition)
+- (subtraction)
+* (multiplication)
+/ (division)
+			#include <iostream>
+			using namespace std;
+
+			int main()
+			{
+				cout << (5 + 10 / (7 - 2)) * 2;
+				return 0;
+			}
+
+C++ follows the order of operations, so (7 - 2) is evaluated first and evaluates to 5. Next, 10 / 5 is evaluated and evaluates 2. Thirdly, 5 + 2 is evaluated and evaluates to 7. Finally, 7 * 2 is evaluated, giving us the answer, which is 14.
+
+
+
+Conditional operators and If statements
+This is the list of conditional operators:
+== (is equal to)
+!= (is not equal to)
+> / >= (is greather than / is greater than or equal to)
+< / <= (is less than / is less than or equal to)
+This program demonstrates the decision making process in C++:
+			#include <iostream>
+			using namespace std;
+
+			int main()
+			{
+				int x = 10;
+				int y = 10;
+
+				if (x > y)
+				{
+					cout << "x is greater than y";
+				}
+
+				else if (x < y)
+				{
+					cout << "x is less than y";
+				}
+
+				else
+				{
+					cout << "x is equal to y"; 
+				}
+
+				return 0;
+			}
+

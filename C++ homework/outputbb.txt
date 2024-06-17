@@ -1,0 +1,29 @@
+Anaheim Angels:	 American League
+Arizona Diamondbacks:	 National League
+Atlanta Braves:	 National League
+Baltimore Orioles:	 American League
+Boston Americans:	 American League
+Boston Braves:	 National League
+Boston Red Sox:	 American League
+Brooklyn Dodgers:	 National League
+Chicago Cubs:	 National League
+Chicago White Sox:	 American League
+Cincinnati Reds:	 National League
+Cleveland Indians:	 American League
+Detroit Tigers:	 American League
+Florida Marlins:	 National League
+Kansas City Royals:	 American League
+Los Angeles Dodgers:	 National League
+Milwaukee Braves:	 National League
+Minnesota Twins:	 American League
+New York Giants:	 National League
+New York Mets:	 National League
+New York Yankees:	 American League
+Oakland Athletics:	 American League
+Philadelphia Athletics:	 American League
+Philadelphia Phillies:	 National League
+Pittsburgh Pirates:	 National League
+San Francisco Giants:	 National League
+St. Louis Cardinals:	 National League
+Toronto Blue Jays:	 American League
+Washington Senators:	 American League
