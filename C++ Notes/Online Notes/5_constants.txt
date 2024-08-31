@@ -1,0 +1,32 @@
+Constant variables in C++
+
+
+Constants are variable that can not be modified, once they are declared
+Syntax: const double PI = 3.14159
+        int main()
+        {
+
+        }
+
+If you try to do "PI = 3.14;", you will get a compile time error
+
+------------------------------------------------------------------------------------
+You can also evaluate constants at compile time
+This allows your constants to be built into the executable, instead of determining the value of the constants at run time
+This puts the heavy computations on the developer, instead of the user
+Ex. constexpr double PI = 3.14159;
+
+------------------------------------------------------------------------------------
+If statement with constexpr (evaluated at compile time)
+The condition in a constexpre if statement must also be constexpr
+Ex. constexpr bool test = false;
+    if constexpr(test)
+    {
+        cout << "test is true"
+    }
+    else
+    {
+        cout << "test is false";
+    }
+
+    

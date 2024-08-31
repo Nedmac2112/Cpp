@@ -1,0 +1,37 @@
+References
+
+References allow you to give an alias to a variable
+Ex. int original = 10;
+    int &ref = original; this points to the same memory location as "original"
+    cout << &original << endl;
+    cout << &ref;
+    Output
+    [
+     0x790a7ff9d4
+     0x790a7ff9d4
+    ]
+If you change the value of one variable, the other will also be affected
+Ex. int original = 10;
+    int &ref = original;
+    ref = 5;
+    cout << original;
+    Output
+    [5]
+
+--------------------------------------------------------------------------
+Differences of References and Pointers
+
+| Feature          | References                                               | Pointers                                                 |
+|------------------|----------------------------------------------------------|----------------------------------------------------------|
+| Reassignment     | Cannot be reassigned after initialization                | Can be reassigned to point to different objects          |
+| Nullability      | Cannot be null, must be initialized to a valid object    | Can be nullptr (or NULL) or contain garbage value        |
+| Dereferencing    | Automatically dereferenced when used                     | Requires explicit dereferencing (*p)                     |
+
+--------------------------------------------------------------------------
+References and const
+
+You can make it so that you can't modify the value of the variable that the reference is reffering to
+Ex. int original = 10;
+    const int &ref = original;
+    ref = 5; this will give you an error, since you can't modify "original" through the reference
+

@@ -1,0 +1,198 @@
+Character and String Methods in C++
+
+
+
+Character Methods
+
+Check if Character is Alphanumeric
+-------------------------------------------------------------------
+Function: `isalnum`
+- Checks if a character is alphanumeric (either a letter or a digit).
+
+Check if Character is Alphabetic
+-------------------------------------------------------------------
+Function: `isalpha`
+- Checks if a character is alphabetic (either uppercase or lowercase letter).
+
+Check if a Character is Blank
+-------------------------------------------------------------------
+Function: `isblank`
+- Checks if a character is a blank space (e.g., space, tab).
+
+Check if Character is Lowercase or Uppercase
+-------------------------------------------------------------------
+Functions: `islower`, `isupper`
+- `islower`: Checks if a character is a lowercase letter.
+- `isupper`: Checks if a character is an uppercase letter.
+
+Check if Character is a Digit
+-------------------------------------------------------------------
+Function: `isdigit`
+- Checks if a character is a digit (0-9).
+
+Turning a Character to Lowercase or Uppercase
+-------------------------------------------------------------------
+Functions: `tolower`, `toupper`
+- `tolower`: Converts a character to lowercase.
+- `toupper`: Converts a character to uppercase.
+
+-----------------------------------------------------------------------------------------------------------------------
+
+String Methods
+
+String Initialization vs. `substr` Method:
+-------------------------------------------------------------------
+Initialization with Substring:
+- string s1{str, index, len};
+  - Creates a substring directly through initialization.
+
+`substr` Method:
+- string s2 = str.substr(index, len);
+  - Uses the `substr` member function to create a substring.
+
+String Creation:
+-------------------------------------------------------------------
+- string s1(numTimes, char);
+  - Creates a string `s1` with `numTimes` `char` characters.
+
+- string s1;
+  s1.assign(numTimes, char);
+  - Creates an empty string `s1` and populates it with `numTimes` `char` characters using the `assign` method.
+
+String Concatenation:
+-------------------------------------------------------------------
+- string s3 = s1 + " " + s2;
+  - Concatenates `s1`, a space, and `s2` to form `s3`.
+
+Appending to a String:
+-------------------------------------------------------------------
+- string s3 = s1.append(s2);
+  - Appends `s2` to `s1` and assigns the result to `s3`.
+
+- string s4 = s1.append(numTimes, char);
+  - Appends `numTimes` `char` characters to `s1`.
+
+- string s5 = s1.append(str, index, len);
+  - Appends a substring of `str` starting at `index` and of length `len` to `s1`.
+
+Print Each Character in a String:
+-------------------------------------------------------------------
+- for (int i = 0; i < str.size(); i++)
+  {
+      cout << str.at(i) << " ";
+  }
+  - Prints each character in a string using a loop and the `at` method.
+
+Front and Back:
+-------------------------------------------------------------------
+- char firstChar = str.front();
+  - Gets the first character in a string.
+
+- char lastChar = str.back();
+  - Gets the last character in a string.
+
+Empty and Length:
+-------------------------------------------------------------------
+- bool isEmpty = str.empty();
+  - Checks if the string is empty.
+
+- size_t length = str.length();
+  - Gets the length of the string.
+
+Clear:
+-------------------------------------------------------------------
+- str.clear();
+  - Clears the string.
+
+Insert:
+-------------------------------------------------------------------
+- str.insert(index, numTimes, char);
+  - Inserts `numTimes` `char` characters at a specific `index`.
+
+- str.insert(index, substring);
+  - Inserts a `substring` at a specific `index`.
+
+- str.insert(index, str2, startIndex, len);
+  - Inserts a substring of `str2` starting at `startIndex` and of length `len` at `index`.
+
+Erase:
+-------------------------------------------------------------------
+- str.erase(index, len);
+  - Erases a substring of `str` starting at `index` and of length `len`.
+
+Pop Back:
+-------------------------------------------------------------------
+- str.pop_back();
+  - Removes the last character in a string.
+
+Push Back:
+-------------------------------------------------------------------
+- str.push_back(char);
+  - Adds a `char` to the end of a string.
+
+Comparing Strings:
+-------------------------------------------------------------------
+- int result = str1.compare(str2);
+  - Compares two strings.
+
+- int result = str1.compare(index, len, str2);
+  - Compares a substring of `str1` with `str2`.
+
+- int result = str1.compare(index1, len1, str2, index2, len2);
+  - Compares a substring of `str1` with a substring of `str2`.
+
+Replace:
+-------------------------------------------------------------------
+- str.replace(index, len, newStr);
+  - Replaces a substring of `str` with `newStr`.
+
+- str.replace(index, len, str2, startIndex, len2);
+  - Replaces a substring of `str` with a substring of `str2`.
+
+Swap:
+-------------------------------------------------------------------
+- str1.swap(str2);
+  - Swaps the contents of `str1` and `str2`.
+
+Searching Strings:
+-------------------------------------------------------------------
+- size_t index = str.find(subStr);
+  - Finds the first occurrence of `subStr` in `str`.
+
+- size_t index = str.find(subStr, startIndex);
+  - Finds the first occurrence of `subStr` in `str` starting at `startIndex`.
+
+- size_t index = str.rfind(subStr);
+  - Finds the last occurrence of `subStr` in `str`.
+
+- size_t index = str.find_first_of(charSet);
+  - Finds the first occurrence of any character in `charSet` in `str`.
+
+- size_t index = str.find_last_of(charSet);
+  - Finds the last occurrence of any character in `charSet` in `str`.
+
+- size_t index = str.find_first_not_of(charSet);
+  - Finds the first occurrence of any character not in `charSet` in `str`.
+
+- size_t index = str.find_last_not_of(charSet);
+  - Finds the last occurrence of any character not in `charSet` in `str`.
+
+Convert to String:
+-------------------------------------------------------------------
+- string s1 = to_string(num);
+  - Converts a number to a string.
+
+String to Integer:
+-------------------------------------------------------------------
+- int num = stoi(str);
+  - Converts a string to an integer.
+
+String to Double:
+-------------------------------------------------------------------
+- double num = stod(str);
+  - Converts a string to a double.
+
+Raw String Literals:
+-------------------------------------------------------------------
+- string rawStr = R"(raw string content)";
+  - Creates a raw string literal, preserving special characters such as newlines and quotes.

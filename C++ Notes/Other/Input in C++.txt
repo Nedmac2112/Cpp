@@ -1,0 +1,33 @@
+Input in C++
+
+cin syntax "cin >> varName": reads all characters entered until a white space is encountered.
+If an integer is input using cin, then cin will read all integers until a non-integer or white-space character is encountered. If you leave cin empty, it will wait until you input atleast one non-white-space charater before accepting input. If you are entering a non-integer value for an integer variable, the cin.fail() will return true, and the variable's value will be set to 0. If you enter numbers followed by a non-integer value for an integer, integers up to the first non-integer value will be accepted, and the other characters will be left in the input buffer. If there is no other characters in the input buffer, a '\n' character will be left in the buffer.
+
+To clear the input buffer, use the command "cin.ignore(numeric_limits<streamsize>::max(), '\n');". (included in the "limits" library)
+This removes all characters in the input buffer up to and including the '\n' character.
+Ex. if(cin.fail())
+    {
+       cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+
+If cin.fail() returns true, you can use the command "cin.clear()" in order to set cin back to a state that you can use. cin.fail() will return true if you enter the wrong type of data for a variable, or you exceed the variables mamimum or minimum value.
+Ex. if(cin.fail())
+    {
+       cin.clear();
+    }
+
+cin.peek() will look at the next character in the input buffer. This can be useful if you want to make sure that input for an integer such as "123abc" is rejected. "123abc" will not cause cin.fail() to return true, since only the "123" will be accepted, but you still might not want the user to be able to enter other non-integer characters. Usually you should combine cin.clear() and cin.ignore() as shown below
+Ex. if(cin.peek() != '\n')
+    {
+       cin.clear();
+       cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+
+
+getline syntax "getline(cin, varName)": used to get an entire line of text, including white-space characters.
+getline is only used to enter string data. It is common to enter string data, and then convert the string to another datatype for further use. Since you can't use cin.fail() to check for bad input, exceptions are a good way to deal with conversions when using getline.
+
+If you have characters left in the input buffer from cin, and you use getline after, the characters from the input buffer will be stored in that variable, and you will not have a chance to enter a value.
+Ex. cin >> num; // you enter "123abc", the "123" will be accepted, and the "abc" will be left in the buffer
+    getline(cin, text); // you wont have a chance to input here
+    cout << text; // output will be "abc"

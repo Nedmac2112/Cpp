@@ -1,0 +1,34 @@
+"contents of the <iostream> library are copied into the cpp file"
+using namespace std;
+
+float a = 12.0f;
+float b = 8.0f;
+float c;
+
+int main(int argc, char *argv[])
+{
+    c = (((3.14)+(b))/2); // Replacing AVG(PI, b) with (((3.14)+(b))/2) and PI with 3.14
+    cout << c;
+    return 0;
+}
+
+To include "FEET_TO_CM = 30.48" in all my C++ files, I would put "FEET_TO_CM = 30.48" in a header file (test.h for example).
+I would then write "#include "test.h"" in the files where I want access to "FEET_TO_CM = 30.48".
+
+test.h
+#ifndef TEST_H
+#define TEST_H
+
+const double FEET_TO_CM = 30.48;
+
+#endif
+
+main.cpp
+#include <iostream>
+#include "test.h"
+using namespace std;
+
+int main()
+{
+    cout << FEET_TO_CM; // 30.48 is ouput to the console
+}

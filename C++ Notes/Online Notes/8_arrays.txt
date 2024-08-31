@@ -1,0 +1,84 @@
+Arrays in C++
+
+Declare an array
+Ex. string names[3]; This will store an array of 3 names
+
+Initialize an array
+Values start at index 0
+Ex. names[0] = "Camden";
+    names[1] = "Kelton";
+    names[2] = "Bryce";
+
+Declare and initialize array
+Ex. string names[3] = {"Camden", "Kelton", "Bryce"};
+
+Output array data
+cout << names[1];
+Output
+[Kelton]
+
+You can also find the size of an array at runtime
+Ex. cout << size(names);
+Output
+[3]
+
+You can also find the size of the array in bytes
+Ex. cout << sizeof(names);
+Output
+[96]
+
+-------------------------------------------------------------
+Character array
+Ex. char message[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+To store a string in a char array, it is better to do this 
+Ex. char message[5] = "Hello";
+
+You can directly print out a character array to the console, instead of using a for loop
+You need to create a char array with a null terminator, like above, making it a C-style string 
+This ensures that no garbage values are printed out after directly printing the array
+Ex. cout << message;
+Output
+[Hello]
+
+Using getline() for a character array
+Ex. char name[20]; this includes the null terminator
+    cin.getline(name, 20); allows you to type in 19 characters, since the null terminator is included
+
+-------------------------------------------------------------
+Random numbers
+Seed the random number generator
+This causes there to be different random numbers each time the program is executed
+Ex. srand(time(0));
+Generate a random number between 1 and 10
+Ex. int x = (rand() % 10) + 1;
+
+-------------------------------------------------------------
+Multi-dimensional arrays
+Arrays can have more than one dimention
+An exmaple of something with more than one dimension, would be a table, since it has rows and columns (2 dimensions)
+Ex. int numArr[3][3] =
+    {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+You can use nested for loops to print the multi-dimensional array
+Ex. for (int i = 0; i < 3; ++i) This represents the rows
+    {
+        for (int j = 0; j < 3; ++j) This represnets the columns
+        {
+            cout << numArr[i][j] << " ";
+        }
+        cout << endl;
+    }
+Output
+[
+    1 2 3 
+    4 5 6 
+    7 8 9   
+]
+
+
+
+
+

@@ -1,0 +1,141 @@
+Pointers
+
+Pointers store a memory address if another variable
+You can tell that something is a pointer by the '*' symbol being used in the variable's type
+
+Declare a pointer 
+Ex. int *p1 = nullptr; This means that the pointer does not hold any address
+
+Initialize a pointer
+Ex. int x = 20;
+    p1 = &x; p1 now points to the memory address of x
+
+Declare and Initialize a pointer
+Ex. int x = 20;
+    int *p1 = &x;
+
+--------------------------------------------------------------------------------
+Printing a pointer
+Ex. int x = 20;
+    int *p1 = &x;
+    cout << p1;
+    Output
+    [0x3d1bdff7b4] this is the memory address of the variable x
+
+Changing what a pointer points to
+Ex. int x = 20;
+    int y = 4;
+    int *p1 = &x;
+    cout << p1 << endl;
+    p1 = &y;
+    cout << p1;
+    Output
+    [
+     0x9fa7bff754
+     0x9fa7bff750 p1 now points to a different address
+    ]
+
+Seeing the value that a pointer points to (Dereferencing a pointer)
+Ex. int x = 20;
+    int *p1 = &x;
+    cout << *p1;
+    Output
+    [20] this shows that the memory address associated with p1 has the value 20
+
+--------------------------------------------------------------------------------
+Character pointers 
+Ex. const char *message = {"Hello World"}; this is a C-style string (these can't be modified like char arrays)
+    cout << message << endl;
+    cout << *message; this prints the first character, since the pointer stores the first char in the array
+    Output
+    [
+     Hello World
+     H
+    ]
+
+Character pointer array
+Ex. const char *messages [] = {"Hello", "Goodbye", "How are you?", "What's your name?"};
+You could also write something like this using a multidimensional array
+Ex. char messages [] [90] = {"Hello", "Goodbye", "How are you?", "What's your name?"};
+However, the second option only allows 90 characters per message, and pad the remaining space with the null terminator
+The first option is better, because the messages can change size dynamically
+
+--------------------------------------------------------------------------------
+Constant pointers
+
+You can make it so that a pointer can't change the value of the variable that it is pointing to
+Ex. int x = 20; 
+    const int* p1 = &x;
+    *p1 = 30; this will not work, the pointer is a pointer to a constant value
+
+You can also prevent a pointer from pointing to a different memory location
+Ex. int x = 20;
+    int y = 4;
+    int* const p1 = &x;
+    p1 = &y; this will not work, because the pointer itself is constant, and the memory address it holds can't be modified
+
+Combination of both
+Ex. int x = 20;
+    int y = 4;
+    const int* const p1 = &x;
+    *p1 = 30; this will not work, the pointer is a pointer to a constant value
+     p1 = &y; this will not work, because the pointer itself is constant, and the memory address it holds can't be modified
+
+How to remember which is which
+If const shows up on the left of '*', the data is constant
+If const shows up on the right of the '*', the pointer is constant
+
+--------------------------------------------------------------------------------
+Copying data from one array to another (see 9_pointers.cpp)
+
+--------------------------------------------------------------------------------
+Pointer arithmetic
+
+Ex. int nums[4] = {34, 21, 88, 67};
+    int *p1 = nums;
+    cout << *p1 << endl;
+    p1++;
+    cout << *p1;
+    Output
+    [
+     34
+     21
+    ]
+
+You can use this in the same way as "arr[n] = value;"
+Ex. int nums[4] = {34, 21, 88, 67};
+    int *p1 = nums;
+    *(p1 + 1) = 10; this is the same as "nums[1] = 10;"
+
+
+You can use pointer arithmetic to find the distance between elements in an array
+Ex. int nums[4] = {34, 21, 88, 67};
+    int *p1 = (nums + 1);
+    int *p2 = (nums + 3);
+    cout << p2 - p1;
+    Output
+    [2]
+
+--------------------------------------------------------------------------------
+Dynamic memory allocation
+
+Creating dynamic memory
+Ex. int *p1 = nullptr;
+    p1 = new int; this creates storage space for p1 on the heap in memory
+
+Assigning a value to dynamic memory
+Ex. int *p1 = new int(10);
+
+Deleting dynamic memory
+Ex. int *p1 = new int;
+    delete p1; this returns the memory back to the computer
+    p1 = nullptr; this makes sure that the pointer is not pointing to an invalid memory address
+
+
+For info on memory leaks, see "https://www.udemy.com/course/the-modern-cpp-20-masterclass/learn/lecture/24458908#overview"
+
+Dynamic arrays
+Ex. int *nums = new int[5]{23, 12, 82, 45, 76};
+    delete[] nums;
+    nums = nullptr;
+--------------------------------------------------------------------------------

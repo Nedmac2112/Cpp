@@ -1,0 +1,109 @@
+C++ Basics
+
+
+Main program setup
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    "code goes here"
+    return 0;
+}
+
+If you dont use "using namespace std;", then you will have to prefix things in that namespace with "std::"
+If you're working on a large project, it's best to not include "using namespace std;", so you don't introduce any naming conflicts
+
+------------------------------------------------------------------------------------------------------------------------
+Compiling your program in the console
+
+g++ "filename".cpp -o "exefilename"
+
+If you don't include the -o "exefilename", the default name will be "a.exe"
+To run the executable file, just type the name of the exe file in the console
+
+------------------------------------------------------------------------------------------------------------------------
+Comments are useful to leave yourself and others information about the program you are working on
+Single-line comments: "// text goes here"
+Multi-line comments: /* test
+                        goes
+                        here
+                     */
+                    
+------------------------------------------------------------------------------------------------------------------------
+Basic data types in C++ (size depends on the system your using)
+- char (1 byte) stores a single character
+- int (4 bytes) stores an integer
+- long int (4 bytes) stores a larger integer than int
+- long long int (8 bytes) stores a larger integer than long int
+- short int (2 bytes) stores a smaller integer than int
+- unsigned int (4 bytes) stores only positive integers
+- float (4 bytes) stores a single precision floating point number
+- double (8 bytes) stores a double precision floating point number
+- bool (1 byte) represents true or false
+
+------------------------------------------------------------------------------------------------------------------------\
+Output to the console
+"cout <<" is what is used to print to the console
+Ex. cout << "Hello World"; This displays "Hello World" to the console
+
+"cout << '\n';" or "cout << endl;" prints out a new line character
+
+------------------------------------------------------------------------------------------------------------------------
+Declaring variables
+Syntax: datatype varname = value;
+Ex. int num1 = 25;
+    short int num2 = 8;
+    unsigned int num3 = 36u;
+    long int num4 = 213l
+    double num5 = 30.5;
+    char c = 'T';
+    bool b = true; if printed to the console, 1 means true, and 0 measn false
+
+Use "cout << boolalpha << b;" to print true, instead of 1
+
+You can initialize varaibles in different ways
+Ex. int x(10);
+    int y{4};
+
+------------------------------------------------------------------------------------------------------------------------
+Input from the console
+"cin >>" is used to get all input until a space in encountered
+Ex. int age;
+    cin >> age; This will accept an integer as input, and assign it to the age variable
+
+"cin.getline(var)" is used to get a whole line of input, not just until a space is encountered
+Ex. string name;
+    cin.getline(name) This will accept multiple words, such as "Camden Kirkpatrick"
+
+------------------------------------------------------------------------------------------------------------------------
+Arithmetic operators
+- + addition
+- - subtraction
+- * multiplication
+- / division
+- % modulo (returns the remainder of 2 numbers)
+
+Ex. int a = 5 % 2; a equals 1, since the remainder of 5 / 2 is 1
+
+You can combine the '=' operator with any of these operators
+Ex. int a = 5;
+    a += 3; a is now equal to its current value plus 3 (a = 8)
+
+There is also an increment (++) and decrement (--) operator
+These are used to increse or decrease the value of an integer by 1
+Ex. a = 5
+    a++; a is now equal to its current value plus 1 (a = 6)
+
+You can put the increment and decrement operators before or after the variable
+Ex. int a = 5;
+    int b = 3;
+    cout << ++a; when you put the operator before the variable, it will increment the variable first, then display its value
+    cout << b++; when you put the operator after the variable, the value will be diplayed first, then the variable will be incremented
+    Output
+    [63]
+------------------------------------------------------------------------------------------------------------------------
+
+
+

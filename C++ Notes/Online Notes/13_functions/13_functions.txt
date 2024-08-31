@@ -1,0 +1,33 @@
+Different Types of Functions in C++
+
+1. Void Functions
+   - Description: Functions that do not return a value. They perform an action but provide no result back to the caller.
+   - Example: void greet(); and void greet(string name);
+
+2. Functions with Return Types
+   - Description: Functions that return a value of a specified type. They can return any type of value, such as int, double, etc.
+   - Example: int luckyNumber(); and int max(int a, int b);
+
+3. Functions with Pointer Parameters
+   - Description: Functions that accept pointers as parameters, allowing them to modify the value of variables passed by reference.
+   - Example: void addOne(int *x); and void printNumPtr(const int *const num);
+
+4. Functions with Reference Parameters
+   - Description: Functions that accept references as parameters. These references act as aliases for variables and allow for efficient parameter passing without copying.
+   - Example: void printNumRef(const int &num);
+
+5. Functions with Array Parameters
+   - Description: Functions that accept arrays as parameters. When passing arrays, they decay into pointers, and the size must often be passed explicitly.
+   - Example: double sum(double arr[], size_t size); and double sumRef(double (&arr)[5]);
+
+6. Functions with Multi-Dimensional Array Parameters
+   - Description: Functions that handle multi-dimensional arrays. The size of the dimensions must be specified when passing these arrays to functions.
+   - Example: double multiDimSum(double arr[][3], size_t numRows); and double multiDimSumRef(double (&arr)[2][3]);
+
+7. Constexpr Functions
+   - Description: Functions that are evaluated at compile time. They must be fully defined before the main function.
+   - Example: constexpr int getValue(int x) { return x * 10; }
+
+8. Constexpr Functions
+   - Description: Functions that are evaluated at compile time. They must be fully defined before the main function.
+   - Example: consteval int getValue2(int x) { return x * 10; }

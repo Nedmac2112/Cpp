@@ -1,0 +1,90 @@
+Formatting in C++
+Uses <iomanip>
+
+
+------------------------------------------------------------------------------------
+Formatting text
+
+setw(n): sets the width of the next output field to n characters
+Ex. string x = "Hello";
+    cout << setw(8) << x;
+    Output
+    [   Hello]
+By default, text is right alligned
+You can set it to be left alligned too
+Ex. string x = "Hello"
+    cout << left << setw(8) << x;
+    Output
+    [Hello   ]
+You can also change the character that is in the empty spaces
+Ex. string x = "Hello"
+    cout << setfill('#') << setw(8) << x;
+    Output
+    [###Hello]
+
+------------------------------------------------------------------------------------
+Formatting numbers
+
+You can set the sign of a number to be on the far leftside of the console
+Ex. int x = -5;
+    cout << internal << setfill('$') << setw(5) << x;
+    Output
+    [-$$$5]
+To disable the internal flag, do: "cout.unsetf(ios::internal);"
+
+You can force the sign of a positive number to be shown
+Ex. int x = 7;
+    cout << showpos << x;
+    Output
+    [+7]
+To disable the showpos flag, do: "cout << noshowpos;"
+
+Represent numbers in different systems
+Ex. int x = 0x0F; hexadecimal number
+    int y = 017; octal number
+    int z = 0b00001111; binary number
+When output, the result will be 15 for each of these variables
+
+You can also start with a decimal value, and see what it looks like in differnet number systems
+Ex. int x = 1000;
+    cout << hex << x << endl;
+    cout << oct << x;
+    Output
+    [
+      3e8
+      1750
+    ]
+You can decidie to show the base so you know what number system you're looking at
+Ex. int x = 1000;
+    cout << showbase << hex << x;
+    Output
+    [0x3e8]
+To turn it off, do: "cout << noshowbase;"
+
+------------------------------------------------------------------------------------
+Formatting floats
+
+Ex. double x = 23682.8363;
+    cout << floatNum << endl;
+    cout << fixed << floatNum << endl; usually used with setprecision(), not by itself                    
+    cout << scientific << floatNum << endl; chnages the output format to scientific notation            
+    cout << defaultfloat << floatNum << endl; removes fixed          
+    cout << fixed << setprecision(4) << floatNum << endl; this is what you normally should do when formatting floating point numbers
+    cout << defaultfloat << setprecision(6) << floatNum << endl; sets the precision back to the default (6), and removes fixed
+    Output
+    [
+        23682.8
+        23682.836300
+        2.368284e+04
+        23682.8
+        23682.8363
+        23682.8
+    ]
+
+You can make it so that the decimal point is always shown
+Ex. double x = 12.0;
+    cout << showpoint << x;
+    Output
+    [12.0000]
+You could also do: cout << fixed << setprecision(1) << x; this will give you 12.0, instead of 12.0000
+To disable showpoint, do: "cout << noshowpoint;"

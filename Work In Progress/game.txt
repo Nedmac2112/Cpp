@@ -1,0 +1,6 @@
+Ideas for RPG game
+
+Show the stats for each class
+Make it so that the player and enemies do a range of damage (have a min and max value)
+Add a message displaying a critical hit (find average damage, and if you deal more than that, it's a critical hit)
+Add a leveling system with xp (each time the player levels up, max health and attack are increased)

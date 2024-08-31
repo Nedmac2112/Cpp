@@ -1,0 +1,238 @@
+Loops and logic
+
+------------------------------------------------------------------------------------------------------------------------
+Conditional/logical operators and statements 
+
+Conditional operators allow you to check whether a condion is true or false, and execute code based off whether the condition evaluates to true
+List of conditional operators
+- > greater than
+- < less than
+- >= greater than or equal to
+- <= less than or equal to
+- == equal to
+- != not equal to
+
+List of logical operators
+- && (And)
+- || (Or)
+- ! (Not)
+
+Condtional statements are used to help the program determine what should happen next, based on a condition
+There are 3 types of conditional statements: if, if else, and else
+------------------------------------------------------------------------------------------------------------------------
+If statements
+Syntax: if (condition)
+        {
+            "run this code"
+        }
+
+A simple example of checking a condition, would be making sure an age variable holds a positive value
+Ex. int age = 20;
+    if (age > 0)
+    {
+        cout << "Age is valid!";
+    }
+    Output
+    [Age is valid!]'
+
+Ex. int age = 20;
+    if (!(age > 0)) if age is not greater than 0
+    {
+        cout << "Age is invalid!";
+    }
+
+You can also combine multiple conditional operators, logical operator
+Ex. int age = 26;
+    if (age >= 20 && age <= 29) this checks if your age is between 20 and 29
+    {
+        cout << "You are in your twenties";
+    }
+    Output[You are in your twenties]
+
+Ex. int num = 7; 
+    if (num > 0 || num % 2 == 0) only one of these conditions has to be true for the code to run
+    {
+        cout << "The number is either positive or even" << endl;
+    }
+    Output
+    [The number is either positive or even.]
+
+You can also initialize a variable at the start of an if statement
+Ex.  int number = 10;
+    if (int doubled = number * 2; doubled > 15)
+    {
+        cout << "The doubled value is greater than 15." << endl;
+    }
+    else
+    {
+        cout << "The doubled value is not greater than 15." << endl;
+    }
+------------------------------------------------------------------------------------------------------------------------
+Else if statements
+Syntax: if (condition)
+        {
+            "run this code"
+        }
+
+        else if (this condition)
+        {
+            "run this code instead"
+        }
+
+Ex. int age = 16;
+    if (age >= 18)
+    {
+        cout << "You are an adult";
+    }
+
+    else if (age < 18)
+    {
+        cout << "You are a child";
+    }
+    Output
+    [You are a child]
+------------------------------------------------------------------------------------------------------------------------
+Else statements
+Syntax: if (condition)
+        {
+            "run this code"
+        }
+
+        else if (this condition)
+        {
+            "run this code instead"
+        }
+
+        else
+        {
+            "do this"
+        }
+
+Ex. int temperatureF = 77; 
+
+    if (temperatureF < 50) {
+        cout << "It's cold" << endl;
+    } else if (temperatureF >= 50 && temperatureF < 77) {
+        cout << "It's moderate" << endl;
+    } else {
+        cout << "It's hot." << endl;
+    }
+    Output
+    [It's hot]
+
+------------------------------------------------------------------------------------------------------------------------
+Switch statement
+Allows you to write a condensed set of if-else statements
+Ex. int day = 4;
+    
+    switch (day) {
+        case 1: {
+            cout << "Monday" << endl;
+            break;
+        }
+        case 2: {
+            cout << "Tuesday" << endl;
+            break;
+        }
+        case 3: {
+            cout << "Wednesday" << endl;
+            break;
+        }
+        case 4: {
+            cout << "Thursday" << endl;
+            break;
+        }
+        case 5: {
+            cout << "Friday" << endl;
+            break;
+        }
+        default: {
+            cout << "Weekend" << endl;
+        }
+    }
+    Output
+    [Thursday]
+
+You can also initialize a varibale in a switch statment just like in if statements (see line 60)
+
+------------------------------------------------------------------------------------------------------------------------
+Ternary operator
+Allows you to combine an if-else statement into one line
+Ex. int x = 10;
+    int y = 4;
+    int max
+    max = (x > y) ? x : y; this says if x is greater than y, then max is assigned x's value, otherwise, max is assigned y's value
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+Loops
+
+Loops allow blocks of code to be repeated, which help save lots of time writing code, and improve program efficiency
+There are three types of loops in C++: while loops, for loops, and do while loops
+------------------------------------------------------------------------------------------------------------------------
+While loops
+Syntax: while (codition)
+        {
+            "run this code"
+        }
+
+While loops are useful when you don't know how many times the code will need to be executed
+This is very useful when taking user input (this will be covered later)
+It is important to make sure that your while loop stops at a certain point, otherwise you will have an infinite loop
+
+Ex. int x = 0;
+    while (x < 10)
+    {
+        cout << x << " ";
+        x++; if the value of x is not updated, the loop will continue forever, since "0 < 10" always evaluates to true
+    }
+    Output
+    [0 1 2 3 4 5 6 7 8 9]
+
+------------------------------------------------------------------------------------------------------------------------
+Do while loops
+Syntax: do
+        {
+            "this code"
+        } while (condition);
+
+Do while loops are almost the same as a while loop, but code in a do while loop is guaranteed to be executed atleast once
+
+Ex. int x = 20;
+    do
+    {
+        cout << x << " ";
+        x++;
+    } (while x < 10) since the condition is at the end of the loop, 20 will be printed, then the loop will terminated
+    Output
+    [20]
+
+------------------------------------------------------------------------------------------------------------------------
+For loops
+Syntax: for (int i = value; condition; change value of i );
+        {
+            "execute this code"
+        }
+
+For loops are useful when you know how many times that you want to execute a loop.
+They are also useful, because the counter variable in the for loop (i) can be printed out to tell you how many time you have executed the loop
+
+Ex. for (int i = 0; i < 10; i++)
+    {
+        cout << i << " ";
+    }
+    Output[0 1 2 3 4 5 6 7 8 9]
+
+You can also start at a positive number, and count down to 0
+Ex. for(int i = 10; i  >0; i--)
+    {
+        cout << i << " ";
+    }
+    Output[10 9 8 7 6 5 4 3 2 1]
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+

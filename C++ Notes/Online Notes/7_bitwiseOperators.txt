@@ -1,0 +1,50 @@
+Bitwise Operators
+
+
+Shift Operators
+Bitshift left (var << n): moves the bits in a variable left the specified number of times
+Formula: var << n = var * 2^n
+Ex. int x = 20; (0001 0100)
+    cout << (x << 1);
+    Output
+    [0010 1000] (x = 20 * 2^1 / x = 40)
+Bitshift right (var >> n): moves the bits in a variable right the specified number of times
+Formula: var >> n = floor(var / 2^n)
+Ex. int x = 20; (0001 0100)
+    cout << (x >> 1);
+    Output
+    [1010] (x = 20 / 2^1 / x = 10)
+
+---------------------------------------------------------------------------------------------------
+Logical Operators
+&: AND
+|: OR 
+~: NOT
+^: XOR (exclusive OR)
+┌───┬───┬───┬───┬───┬───┐
+│ a │ b │a&b│a|b│~a │a^b│
+├───┼───┼───┼───┼───┼───┤
+│ 0 │ 0 │ 0 │ 0 │ 1 │ 0 │
+├───┼───┼───┼───┼───┼───┤
+│ 0 │ 1 │ 0 │ 1 │ 1 │ 1 │
+├───┼───┼───┼───┼───┼───┤
+│ 1 │ 0 │ 0 │ 1 │ 0 │ 1 │
+├───┼───┼───┼───┼───┼───┤
+│ 1 │ 1 │ 1 │ 1 │ 0 │ 0 │
+└───┴───┴───┴───┴───┴───┘
+Ex. unsigned char value1{0x3}; 0000 0011
+    unsigned char value2{0x5}; 0000 0101
+    cout << bitset<8>(value1 & value2);
+    Output
+    [0000 0001]
+
+---------------------------------------------------------------------------------------------------
+Compound Operators
+>>=, <<=, &=, |=, ~=, ^=
+Ex. unsigned char value{0b00110100};
+    value >>= 1; (value = value >> 1)
+    cout << bitset<8>(value);
+    Output
+    [00011010]
+
+

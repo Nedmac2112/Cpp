@@ -1,0 +1,35 @@
+Math functions
+Uses <cmath>
+
+
+---------------------------------------------------------
+Basic Arithmetic Functions
+
+abs(x) : Absolute value of x
+fabs(x) : Absolute value of x (floating point)
+ceil(x) : Rounds x up to the nearest whole number
+floor(x) : ROunds x down to the nearest integer
+round(x) : Rounds x to the nearest integer
+
+---------------------------------------------------------
+Exponential and Logarithmic Functions
+
+exp(x) : Exponential function e^x
+log(x) : Natural logarithm (base e) of x
+log10(x) : Base-10 logarithm of x
+pow(x, y) : x raised to the power y
+sqrt(x) : Square root of x
+cbrt(x) : Cube root of x
+
+---------------------------------------------------------
+Trigonometric Functions:
+
+sin(x), cos(x), tan(x) : Sine, cosine, and tangent of x (in radians)
+asin(x), acos(x), atan(x) : Inverse sine, cosine, and tangent (result in radians)
+
+---------------------------------------------------------
+Constants
+
+M_PI : Pi (π), approximately 3.14159...
+M_E : Euler's number (e), approximately 2.71828...
+

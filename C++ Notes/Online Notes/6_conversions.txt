@@ -1,0 +1,36 @@
+Conversions in C++
+
+
+auto: the auto keyword is used to automatically deduce the type of data being used
+Ex. auto x = 7;
+This auto value determines what value is stored in x, without you having to tell it
+In this case, x is assigned the int data type
+This is useful in more advanced programming, when you have complicated data types
+
+Implicit conversions
+Ex. int a = 6;
+    double b = 7.5
+    auto c = a * b; 
+In this case, c will be have a data type of double
+The reason it will not have an integer data type, is because whichever the bigger data type being used is,
+that is what will be assigned to the new variable (double is 8 bytes, int is 4 bytes)
+
+------------------------------------------------------------------------------------------
+Explicit conversions
+
+Old way (don't use this anymore)
+Ex. double x = 4.5;
+    auto y = (int)(x);
+
+Modern way
+Ex. double x = 22.5;
+    double y = 2.75;
+    auto z = static_cast<int>(x) + static_cast<int>(y); z equals 24 (22 + 2)
+    You could also do it this way (will give a different answer in this case)
+    auto z = static_cast<int>(x + y); z equals 25 (22.5 + 2.75 = 25.25 --> 25)
+
+
+(See how to convert to strings in "12_stringsAndChars.txt")
+
+
+
