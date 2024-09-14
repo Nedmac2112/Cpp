@@ -14,7 +14,7 @@ using namespace std;
 // An abstract class is a class that has at least one pure virtual function
 class Person
 {
-protected: 
+protected:
     string name;
     int age;
     char sex;
@@ -43,14 +43,14 @@ public:
     Employee(string n, int a, char s, int w) : Person(n, a, s), wage(w) {}
 
     // Implementing the pure virtual functions from the base class
-    void setName(string n) { name = n; }
-    void setAge(int a) { age = a; }
-    void setSex(char s) { sex = s; }
+    void setName(string n) override { name = n; }
+    void setAge(int a) override { age = a; }
+    void setSex(char s) override { sex = s; }
     void setWage(int w) { wage = w; }
 
-    string getName() { return name; }
-    int getAge() { return age; }
-    char getSex() { return sex; }
+    string getName() override { return name; }
+    int getAge() override { return age; }
+    char getSex() override { return sex; }
     int getWage() { return wage; }
 
     void display()
@@ -66,7 +66,6 @@ int main()
 {
     Employee e1("Camden", 19, 'M', 15);
     e1.display();
-    
 
     return 0;
 }

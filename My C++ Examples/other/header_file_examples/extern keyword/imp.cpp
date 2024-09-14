@@ -1,8 +1,11 @@
 #include <iostream>
+using namespace std;
 #include "extern.h"
 
-int sharedVariable = 42;  // Definition of the global variable
+int sharedVariable = 42; // Definition of the global variable
 
-void printSharedVariable() {
-    std::cout << "Shared Variable: " << sharedVariable << std::endl;
+// Function definition
+void printSharedVariable()
+{
+    cout << "Shared Variable: " << sharedVariable << endl;
 }

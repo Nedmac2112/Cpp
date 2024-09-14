@@ -57,7 +57,7 @@ public:
     }
 };
 
-//  This function takes a reference to a Square object and calls the print() function on it
+// This function takes a reference to a Square object and calls the print() function on it
 // Polymorphism allows this function to work with both Square and Rectangle objects
 void foo(Square &s)
 {

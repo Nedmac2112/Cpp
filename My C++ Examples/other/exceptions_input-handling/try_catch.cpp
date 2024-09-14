@@ -5,6 +5,7 @@ using namespace std;
 
 float Division(float a, float b)
 {
+    // An exception is manually thrown if b is 0, since C++ does not throw an exception for division by zero
     if (b == 0)
     {
         // only one of these will be executed if there is an exception

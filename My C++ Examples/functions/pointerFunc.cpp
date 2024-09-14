@@ -8,11 +8,9 @@ string *getSecretCode()
     string *code = new string;
     ostringstream converter;
 
-    code->append("CR");
     int randomNum = rand();
     converter << randomNum;
     code->append(converter.str());
-    code->append("NQ");
 
     return code;
 }

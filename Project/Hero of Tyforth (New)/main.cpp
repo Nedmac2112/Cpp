@@ -1,6 +1,18 @@
-// Compile the program: g++ main.cpp implementation.cpp -o main
+// makefile command: mingw32-make -f make.mk
 
-#include "main.h"
+#include <iostream>
+#include <string>
+#include <vector>
+#include <limits>
+#include <cctype>
+#include <chrono>
+#include <thread>
+using namespace std;
+
+#include "gameFunctions.hpp"
+// these are included in gameFunctions.h, but included here for clarity
+#include "player.hpp"
+#include "enemy.hpp"
 
 int main()
 {
@@ -8,9 +20,7 @@ int main()
      string playerName;
      int playerAge;
      char playerGender;
-     const int races[5] = {Human, Elf, Dwarf, Orc, Halfling};
      string playerRace;
-     const int classes[3] = {Warrior, Archer, Mage};
      int playerClass;
      string className;
      bool isValidInput = false;
@@ -35,7 +45,7 @@ int main()
      // Main game loop
      cout << endl
           << "                      ******************************                      " << endl;
-     cout << "                      * Welcome to Hero of Tyforth *                      " << endl;
+     cout << "                      * Welcome to Hero of Tyforth!!! *                      " << endl;
      cout << "                      ******************************                      " << endl
           << endl;
 

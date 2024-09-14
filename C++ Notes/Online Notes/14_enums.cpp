@@ -48,6 +48,7 @@ int main()
     cout << static_cast<int>(month1) << endl;
     cout << static_cast<int>(month7) << endl;
 
+    cout << static_cast<int>(Months::Feb) << endl;
     // using enum Months; // works in C++ 20 and above
     // cout << static_cast<int>(Feb) << endl;
 

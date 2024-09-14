@@ -2,7 +2,7 @@
 using namespace std;
 
 // Generic function to swap two values
-// Templates are used to create generic functions
+// Templates are used to create generic functions, that can work with any data type
 template <typename T>
 void swapVal(T &a, T &b)
 {

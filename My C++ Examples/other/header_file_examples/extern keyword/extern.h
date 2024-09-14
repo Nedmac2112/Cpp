@@ -1,5 +1,5 @@
 #pragma once
 
-extern int sharedVariable;
+extern int sharedVariable; // extern means that the variable is defined elsewhere
 
-void printSharedVariable();
+void printSharedVariable(); // function prototype (declaration)

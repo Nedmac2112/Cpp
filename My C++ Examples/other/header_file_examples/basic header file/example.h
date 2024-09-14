@@ -6,4 +6,3 @@ public:
     int x;
     void myMethod();
 };
-
